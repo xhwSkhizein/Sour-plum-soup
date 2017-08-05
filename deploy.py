@@ -1,9 +1,10 @@
-# Sour-plum-soup
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+#
+# deploy.py - a simple deploy script
+# create by hongv @ 2017-08-05
 
-a simple deploy script write in python.
-
-## Features Support
-
+"""
 #### 1. shell environment check
 * should working in a project dir
 * support python2.7 (maybe later upgrade to python3)
@@ -24,14 +25,13 @@ a simple deploy script write in python.
  - check new service health, (maybe later) regist hook for different service
  - open server traffic gracefully
 
-#### [Plz Tell me what else Any Requirements, advice, tips..  ](https://github.com/xhwSkhizein/Sour-plum-soup/issues/new)
+    90oA*(((((9)))))
+
+"""
+
+import sys
 
 
-
-
-
-----
-
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With my naught cat coding is difficult!!!
-
- oh~ maybe she just want to leave some message to you guys: ol []'=v b'
+if len(sys.args) < 2:
+    print("Usage: deploy.py 10.0.1.1 10.0.1.2 [ip-list] [restart]")
+    sys.exit("current version need server ip list as args")
